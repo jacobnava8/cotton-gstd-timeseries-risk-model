@@ -1,7 +1,7 @@
 # 🌿 Cotton Growth Stage (GSTD) Time-Series Risk Model
 
 <p align="center">
-  <img src="docs/assets/banner.png" alt="Project Banner" width="900"/>
+  <img src="Images/banner.png" alt="Project Banner" width="900"/>
 </p>
 
 <p align="center">
