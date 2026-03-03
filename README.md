@@ -92,6 +92,10 @@ cotton-gstd-timeseries-risk-model/
 
 ```
 
+<p align="center">
+  <img src="Images/banner2.png" alt="Project Banner" width="900"/>
+</p>
+
 ## 🚀 Quickstart
 ### 1) Create environment + install
 ```bash
