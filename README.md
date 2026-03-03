@@ -70,25 +70,31 @@ Two supported definitions:
 
 ## 🗂️ Repository Structure
 
+
 ```text
 cotton-gstd-timeseries-risk-model/
-├─ data/                          # (ignored) raw/interim/processed
-├─ docs/                          # diagrams + client-safe writeups
-├─ models/                        # (local) saved model artifacts
-├─ notebooks/                     # EDA + experiments
-├─ reports/                       # generated outputs (metrics, plots)
-├─ src/
-│  ├─ config/                     # YAML configs
-│  ├─ data/                       # load + splits
-│  ├─ features/                   # lag/rolling/delta feature builders
-│  ├─ models/                     # training + inference
-│  ├─ evaluation/                 # metrics
-│  ├─ explainability/             # SHAP helpers
-│  ├─ pipeline/                   # main training entrypoint
-│  └─ utils/                      # IO + helpers
-├─ tests/
+├─ README.md
 ├─ requirements.txt
-└─ README.md
+├─ .gitignore
+├─ Images/
+│  └─ banner.png
+├─ data/                     # ✅ local only (ignored by git)
+│  └─ raw/
+│     └─ your_dataset.csv
+├─ notebooks/
+│  └─ CAPSTONE_PROJECT.ipynb
+├─ src/
+│  ├─ __init__.py
+│  ├─ config.py              # project settings (columns, lags, horizon, CV, recall target)
+│  ├─ data.py                # load + basic preprocessing + duplicate-column helper
+│  ├─ labels.py              # y_trans_7 labeling (transition within horizon)
+│  ├─ features.py            # lag/delta/rolling features (within RUNNO)
+│  ├─ modeling.py            # LightGBM training + GroupKFold CV (RUNNO)
+│  ├─ thresholding.py        # PR-curve table + threshold selection for target recall
+│  └─ run_pipeline.py        # end-to-end: load → label → features → train → threshold → eval
+└─ reports/                  # optional outputs (ignored by git)
+   ├─ metrics/
+   └─ figures/
 
 ```
 
